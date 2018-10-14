@@ -1,0 +1,93 @@
+﻿body {
+  font: 16px/1.5em "Segoe UI", Arial, sans-serif;
+  background: #bfb6a0;
+}
+body>*{ 
+max-width: 620px;
+ margin: 20px auto;
+ }
+.spoilers-menu>* {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #b63333;
+  margin-left: 5px;
+  padding: 10px 10px;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 #8c1111;
+  border-bottom: 1px solid #8c1111;
+  transition: all 0.6s ease;
+}
+.spoilers-menu>*:hover {
+  background: #8c1111;
+}
+
+.spoiler-link--active {
+  background: #4f9c3d;
+  border-color: #2d751c;
+  text-shadow: 0 1px 0 #2d751c;
+}
+.spoiler-link--active:hover {
+  background: #2d751c;
+}
+ul {
+  display: none;
+}
+.on{display: block !important;}
+
+
+
+
+li,.calcitem {background-repeat: no-repeat ; line-height:50px;margin:5px 0;   }
+
+
+
+.loc1{background-image: url(../img/loc1.png)}
+.loc2{background-image: url(../img/loc2.png)}
+.loc3{background-image: url(../img/loc3.png)}
+.loc4{background-image: url(../img/loc4.png)}
+.ism3{background-image: url(../img/ism3.png)}
+.ism4{background-image: url(../img/ism4.png)}
+.boss{background-image: url(../img/boss.png)}
+.hard{background-image: url(../img/hard.png)}
+.ismx{background-image: url(../img/ismx.png)}
+
+.l{background-position:0 0}
+.ll{background-position:0 -50px}
+.lll{background-position:0 -100px}
+.lv{background-position:0 -150px}
+.v{background-position:0 -200px}
+.vl{background-position:0 -250px}
+.vll{background-position:0 -300px}
+.vlll{background-position:0 -350px}
+.lx{background-position:0 -400px}
+.x{background-position:0 -450px}
+
+
+
+.calc, ul{background: #fff;
+overflow: auto;
+  padding: 25px;
+  margin-top: 25px;
+  border-radius: 3px;
+  border-bottom: 1px solid #999;}
+.calcitem{ padding-left: 60px;
+    float: left;
+    width: 30px;}
+
+ul{text-align:left;
+  list-style: none;
+}
+ li,b {
+  font-size: 16px;
+  position: relative;
+  height: 50px;
+  padding-left: 60px;
+  color: #b63333;
+}
+li{
+font-weight:bold
+}
+h2{ color: #b63333;}
+
+

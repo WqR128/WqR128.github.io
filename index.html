@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Калькулятор DEMO</title>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<nav>
+		<a href="../#rw" onclick="location.reload()">rw</a>
+		<a href="../#rp1" onclick="location.reload()">rp1</a>
+		<a href="../#rp2" onclick="location.reload()">rp2</a>
+	</nav>
+	<nav class="spoilers-menu">
+		<a class="spoiler-link--active" href="" title="Уже вкачен, с самого начала">1</a>
+		<a class="sp_2" href="javascript:sp(2)">2</a>
+		<a class="sp_3" href="javascript:sp(3)">3</a>
+		<a class="sp_4" href="javascript:sp(4)">4</a>
+		<a class="sp_5" href="javascript:sp(5)">5</a>
+		<a class="sp_6" href="javascript:sp(6)">6</a>
+		<a class="sp_7" href="javascript:sp(7)">7</a>
+		<a class="sp_8" href="javascript:sp(8)">8</a>
+		<a class="sp_9" href="javascript:sp(9)">9</a>
+		<a class="sp_10" href="javascript:sp(10)">10</a>
+		<a href="javascript:calc()">Calc</a>
+	</nav>
+	<div class="calc">
+		Выберете грейд(ы)^
+	</div>
+	<div class="spoilers"></div>
+	<template id="index">
+		<ul id="sp_${this.gsx$grade.$t}">
+				<h2>${this.gsx$grade.$t}</h2>
+			<li class="${this.gsx$slot1type.$t}">${this.gsx$slot1qt.$t}</li>
+			<li class="${this.gsx$slot2type.$t}">${this.gsx$slot2qt.$t}</li>
+			<li class="${this.gsx$slot3type.$t}">${this.gsx$slot3qt.$t}</li>
+			<li class="${this.gsx$slot4type.$t}">${this.gsx$slot4qt.$t}</li>
+			<li class="${this.gsx$slot5type.$t}">${this.gsx$slot5qt.$t}</li>
+			<li class="${this.gsx$slot6type.$t}">${this.gsx$slot6qt.$t}</li>
+			<li class="${this.gsx$slot7type.$t}">${this.gsx$slot7qt.$t}</li>
+			<li class="${this.gsx$slot8type.$t}">${this.gsx$slot8qt.$t}</li>
+			<li class="${this.gsx$slot9type.$t}">${this.gsx$slot9qt.$t}</li>
+			<li class="${this.gsx$slot10type.$t}">${this.gsx$slot10qt.$t}</li>
+		</ul>
+	</template>
+	<script src="js/main.js">
+	</script>
+</body>
+</html>
