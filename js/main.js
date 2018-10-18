@@ -5,7 +5,11 @@
    data = JSON.parse(xhr.responseText).feed.entry;
    rout(data)}
   xhr.onerror = function() {
+<<<<<<< HEAD
    document.querySelector('body').innerHTML = '<h1 id="eror">bd error</h1>'}
+=======
+   document.querySelector('.spoilers').innerHTML = '<h1 id="eror">bd error</h1>'}
+>>>>>>> 2d7686a223184df6da493ddcd0b100235241efad
   xhr.send();
   //rout
  
