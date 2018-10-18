@@ -5,7 +5,7 @@
    data = JSON.parse(xhr.responseText).feed.entry;
    rout(data)}
   xhr.onerror = function() {
-   document.querySelector('section').innerHTML = '<h1 id="eror">bd error</h1>'}
+   document.querySelector('body').innerHTML = '<h1 id="eror">bd error</h1>'}
   xhr.send();
   //rout
  
@@ -34,7 +34,7 @@ for (topic in data) {
   for (var i=0; i < loc.length; i++) {calcac(loc[i])}
 }
 	function calcac(subclass) {
-  elements = document.querySelectorAll('.on > .' + subclass);
+  elements = document.querySelectorAll('.on > li> .' + subclass);
   arr = ['l', 'll', 'lll', 'lv', 'v', 'vl', 'vll', 'vlll', 'lx', 'x'];
   for (var x = 0; x < arr.length; x++) {
    sum = 0;
@@ -56,6 +56,7 @@ for (topic in data) {
    link= document.querySelector(".sp_"+num);
    if( link.classList.contains('spoiler-link--active') ) 
    { link.classList.remove('spoiler-link--active'); } else { link.classList.add('spoiler-link--active')}
+    calc()
  }
   
   

@@ -3,13 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Калькулятор DEMO</title>
-	<link href="css/style.css" rel="stylesheet">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="../img/img_og.jpg">
+	<link rel="Shortcut Icon" href="../favicon.ico" type="image/x-icon">
+	<link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
 	<nav>
-		<a href="../#rw" onclick="location.reload()">rw</a>
-		<a href="../#rp1" onclick="location.reload()">rp1</a>
-		<a href="../#rp2" onclick="location.reload()">rp2</a>
+		<a href="javascript:document.location.assign('../#rw');location.reload()">rw</a>
+		<a href="javascript:document.location.assign('../#rp1');location.reload()">rp1</a>
+		<a href="javascript:document.location.assign('../#rp2');location.reload()">rp2</a>
 	</nav>
 	<nav class="spoilers-menu">
 		<a class="spoiler-link--active" href="" title="Уже вкачен, с самого начала">1</a>
@@ -22,28 +25,27 @@
 		<a class="sp_8" href="javascript:sp(8)">8</a>
 		<a class="sp_9" href="javascript:sp(9)">9</a>
 		<a class="sp_10" href="javascript:sp(10)">10</a>
-		<a href="javascript:calc()">Calc</a>
 	</nav>
-	<div class="calc">
+	<div class="calc ">
 		Выберете грейд(ы)^
 	</div>
-	<div class="spoilers"></div>
+	<div class="spoilers flex"></div>
 	<template id="index">
-		<ul id="sp_${this.gsx$grade.$t}">
-				<h2>${this.gsx$grade.$t}</h2>
-			<li class="${this.gsx$slot1type.$t}">${this.gsx$slot1qt.$t}</li>
-			<li class="${this.gsx$slot2type.$t}">${this.gsx$slot2qt.$t}</li>
-			<li class="${this.gsx$slot3type.$t}">${this.gsx$slot3qt.$t}</li>
-			<li class="${this.gsx$slot4type.$t}">${this.gsx$slot4qt.$t}</li>
-			<li class="${this.gsx$slot5type.$t}">${this.gsx$slot5qt.$t}</li>
-			<li class="${this.gsx$slot6type.$t}">${this.gsx$slot6qt.$t}</li>
-			<li class="${this.gsx$slot7type.$t}">${this.gsx$slot7qt.$t}</li>
-			<li class="${this.gsx$slot8type.$t}">${this.gsx$slot8qt.$t}</li>
-			<li class="${this.gsx$slot9type.$t}">${this.gsx$slot9qt.$t}</li>
-			<li class="${this.gsx$slot10type.$t}">${this.gsx$slot10qt.$t}</li>
+		<ul id="sp_${this.gsx$grade.$t}">		
+			<li><i class="${this.gsx$slot1type.$t}">${this.gsx$slot1qt.$t}</i>${this.gsx$slot1qt.$t}</li>
+			<li><i class="${this.gsx$slot2type.$t}">${this.gsx$slot2qt.$t}</i>${this.gsx$slot2qt.$t}</li>
+			<li><i class="${this.gsx$slot3type.$t}">${this.gsx$slot3qt.$t}</i>${this.gsx$slot3qt.$t}</li>
+			<li><i class="${this.gsx$slot4type.$t}">${this.gsx$slot4qt.$t}</i>${this.gsx$slot4qt.$t}</li>
+			<li><i class="${this.gsx$slot5type.$t}">${this.gsx$slot5qt.$t}</i>${this.gsx$slot5qt.$t}</li>
+			<li><i class="${this.gsx$slot6type.$t}">${this.gsx$slot6qt.$t}</i>${this.gsx$slot6qt.$t}</li>
+			<li><i class="${this.gsx$slot7type.$t}">${this.gsx$slot7qt.$t}</i>${this.gsx$slot7qt.$t}</li>
+			<li><i class="${this.gsx$slot8type.$t}">${this.gsx$slot8qt.$t}</i>${this.gsx$slot8qt.$t}</li>
+			<li><i class="${this.gsx$slot9type.$t}">${this.gsx$slot9qt.$t}</i>${this.gsx$slot9qt.$t}</li>
+			<li><i class="${this.gsx$slot10type.$t}">${this.gsx$slot10qt.$t}</i>${this.gsx$slot10qt.$t}</li>
+				<li><h2>${this.gsx$grade.$t}</h2></li>
 		</ul>
 	</template>
-	<script src="js/main.js">
+	<script src="./js/main.js">
 	</script>
 </body>
 </html>
