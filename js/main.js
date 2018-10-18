@@ -1,15 +1,11 @@
-﻿ //getjson
+ //getjson
     var xhr = new XMLHttpRequest(),data;  
   xhr.open('get', 'https://spreadsheets.google.com/feeds/list/12P551IHyrbr7cpf7zlv_TcOhlFadnwspXGRcZMeE8dk/od6/public/values?alt=json', true);
   xhr.onload = function() {
    data = JSON.parse(xhr.responseText).feed.entry;
    rout(data)}
   xhr.onerror = function() {
-<<<<<<< HEAD
    document.querySelector('body').innerHTML = '<h1 id="eror">bd error</h1>'}
-=======
-   document.querySelector('.spoilers').innerHTML = '<h1 id="eror">bd error</h1>'}
->>>>>>> 2d7686a223184df6da493ddcd0b100235241efad
   xhr.send();
   //rout
  
@@ -27,9 +23,6 @@ for (topic in data) {
 		return this.html.call(data)}return'' 
 	}	
 	
-
-
-
 
 
 	function calc() {
@@ -62,14 +55,3 @@ for (topic in data) {
    { link.classList.remove('spoiler-link--active'); } else { link.classList.add('spoiler-link--active')}
     calc()
  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
