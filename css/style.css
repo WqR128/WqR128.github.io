@@ -114,7 +114,7 @@ li i{
   background: 	rgba(241,241,241, .2);
   display: block;
   font-size: 0;
-      box-shadow: 1px 1px 5px #000000;
+  box-shadow: 1px 1px 5px #000000;
 }
 li{
  text-align: center;
@@ -126,6 +126,16 @@ h2{
 line-height: 50px;
     margin-top: 1px;
 }
+
+a { color: #333;text-decoration:none}
+nav{height:50px;}
+nav a {    
+border: 1px solid rgba(0,0,0,.125);
+border-radius: 5px;
+padding: 5px 15px;
+color: #4a0a33;
+font-weight:bold;
+margin: 3px;
+transition: transform 400ms ease-out;
 }
-
-
+.active, nav a:hover {background: #fff; opacity: .97;transform: scale(1.05); color:#d00089;}
