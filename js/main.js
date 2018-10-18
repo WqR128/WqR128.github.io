@@ -25,6 +25,9 @@ for (topic in data) {
 	
 
 
+
+
+
 	function calc() {
 	 document.querySelector('.calc').innerHTML = '';  
 	loc =['loc1','loc2','loc3','loc4','ism3','ism4','boss','hard','ismx']; 
@@ -55,3 +58,20 @@ for (topic in data) {
    { link.classList.remove('spoiler-link--active'); } else { link.classList.add('spoiler-link--active')}
     calc()
  }
+  
+  
+function navactive() {
+  if (location.hash!== ''){
+    document.getElementById(location.hash.slice(1)).classList.add('active') 
+   }else{
+   document.querySelector(`.spoilers-menu`).style.display = 'none'
+   document.querySelector(`.calc`).style.display = 'none'
+   }
+	}  
+  
+  
+  navactive()
+  
+  
+  
+  
