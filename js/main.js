@@ -24,17 +24,13 @@ for (topic in data) {
 	}	
 	
 
-
-
-
-
 	function calc() {
 	 document.querySelector('.calc').innerHTML = '';  
 	loc =['loc1','loc2','loc3','loc4','ism3','ism4','boss','hard','ismx']; 
   for (var i=0; i < loc.length; i++) {calcac(loc[i])}
 }
 	function calcac(subclass) {
-  elements = document.querySelectorAll('.on > li> .' + subclass);
+  elements = document.querySelectorAll('.on > .' + subclass);
   arr = ['l', 'll', 'lll', 'lv', 'v', 'vl', 'vll', 'vlll', 'lx', 'x'];
   for (var x = 0; x < arr.length; x++) {
    sum = 0;
@@ -44,7 +40,7 @@ for (topic in data) {
      }
    }
    aut = '';
-   if (sum != 0) {aut += '<b class="' + subclass + ' ' + arr[x] + ' calcitem">' + sum + '</b>'}
+   if (sum != 0) {aut += '<li class="' + subclass + ' ' + arr[x] + '"><i></i>' + sum + '</li>'}
    document.querySelector('.calc').innerHTML += aut 
   }
 }
@@ -59,7 +55,6 @@ for (topic in data) {
     calc()
  }
   
-  
 function navactive() {
   if (location.hash!== ''){
     document.getElementById(location.hash.slice(1)).classList.add('active') 
@@ -69,9 +64,35 @@ function navactive() {
    }
 	}  
   
-  
   navactive()
   
-  
-  
-  
+    var showingTooltip;
+    document.onmouseover = function(e) {
+      var target = e.target;
+      var tooltip = target.getAttribute('data-tooltip');
+      if (!tooltip) return;
+      var tooltipElem = document.createElement('div');
+      tooltipElem.className = 'tooltip';
+      tooltipElem.innerHTML = tooltip;
+      document.body.appendChild(tooltipElem);
+      var coords = target.getBoundingClientRect();
+      var left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2;
+      if (left < 0) left = 0; // не вылезать за левую границу окна
+      var top = coords.top - tooltipElem.offsetHeight - 5;
+      if (top < 0) { // не вылезать за верхнюю границу окна
+        top = coords.top + target.offsetHeight + 5;
+      }
+
+      tooltipElem.style.left = left + 'px';
+      tooltipElem.style.top = top + 'px';
+      showingTooltip = tooltipElem;
+    };
+
+    document.onmouseout = function(e) {
+      if (showingTooltip) {
+        document.body.removeChild(showingTooltip);
+        showingTooltip = null;
+      }
+
+    };
+    
