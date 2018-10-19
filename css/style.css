@@ -19,6 +19,7 @@ max-width: 1035px;
   text-shadow: 0 1px 0 #8c1111;
   border-bottom: 1px solid #8c1111;
   transition: all 0.6s ease;
+  animation: fadeIn 1.2s;
 }
 .spoilers-menu>*:hover {
   background: #8c1111;
@@ -37,27 +38,27 @@ max-width: 1035px;
     margin-left: 10px;
 }
 ul {display: none;}
-.on{display: block !important;}
-li,.calcitem {background-repeat: no-repeat ;      color: #b63333;  }
-.loc1{background-image: url(../img/loc1.png)}
-.loc2{background-image: url(../img/loc2.png)}
-.loc3{background-image: url(../img/loc3.png)}
-.loc4{background-image: url(../img/loc4.png)}
-.ism3{background-image: url(../img/ism3.png)}
-.ism4{background-image: url(../img/ism4.png)}
-.boss{background-image: url(../img/boss.png)}
-.hard{background-image: url(../img/hard.png)}
-.ismx{background-image: url(../img/ismx.png)}
-.l{background-position:0 0}
-.ll{background-position:0 -50px}
-.lll{background-position:0 -100px}
-.lv{background-position:0 -150px}
-.v{background-position:0 -200px}
-.vl{background-position:0 -250px}
-.vll{background-position:0 -300px}
-.vlll{background-position:0 -350px}
-.lx{background-position:0 -400px}
-.x{background-position:0 -450px}
+.on,.calc{display: block; animation: fadeIn 1.2s;}
+li{background-repeat: no-repeat ;      color: #b63333;  }
+.loc1 i{background-image: url(../img/loc1.png)}
+.loc2 i{background-image: url(../img/loc2.png)}
+.loc3 i{background-image: url(../img/loc3.png)}
+.loc4 i{background-image: url(../img/loc4.png)}
+.ism3 i{background-image: url(../img/ism3.png)}
+.ism4 i{background-image: url(../img/ism4.png)}
+.boss i{background-image: url(../img/boss.png)}
+.hard i{background-image: url(../img/hard.png)}
+.ismx i{background-image: url(../img/ismx.png)}
+.l i{background-position:0 0}
+.ll i{background-position:0 -50px}
+.lll i{background-position:0 -100px}
+.lv i{background-position:0 -150px}
+.v i{background-position:0 -200px}
+.vl i{background-position:0 -250px}
+.vll i{background-position:0 -300px}
+.vlll i{background-position:0 -350px}
+.lx i{background-position:0 -400px}
+.x i{background-position:0 -450px}
 .flex{
    display: -webkit-box;
   display: -moz-box;
@@ -87,31 +88,24 @@ li,.calcitem {background-repeat: no-repeat ;      color: #b63333;  }
 .on >*:nth-child(5) {transform: rotate(324deg) translate(140.5px) rotate(-324deg);}
 .calc{
   overflow: auto;
-  padding: 15px 25px 25px;
+  padding: 16px ;
   margin-top: 25px; 
 }
-.calcitem{
-    width: 97px;
-    font-size: 16px;
-    height: 50px;
-    line-height: 50px;
-    padding-left: 60px;
-    color: #b63333;
-    float: left;
-    margin-top: 5px;
-}
+
 
 .spoilers,.calc{ background: #fafafa;  border-radius: 3px;}
-ul{list-style: none; overflow: auto;
+ul{list-style: none}
+.spoilers ul{
+  overflow: auto;
 	height: 365px;
 	position: relative;
 	width: 345px;
   margin-top: 25px;
 }
-li i{
+ li i{
   width: 50px;
   height: 50px;
-  background: 	rgba(241,241,241, .2);
+  background-color: 	rgba(241,241,241, .2);
   display: block;
   font-size: 0;
   box-shadow: 1px 1px 5px #000000;
@@ -124,18 +118,34 @@ li{
 }
 h2{
 line-height: 50px;
-    margin-top: 1px;
+margin-top: 1px;
 }
 
+.calc{text-align: center;}
+.calc li{display: inline-block;margin-right: 5px;animation: fadeIn .25s;}
 a { color: #333;text-decoration:none}
-nav{height:50px;}
-nav a {    
-border: 1px solid rgba(0,0,0,.125);
-border-radius: 5px;
-padding: 5px 15px;
+nav:not(.spoilers-menu) a {    
+display: inline-block;
+padding: 5px ;
 color: #4a0a33;
 font-weight:bold;
-margin: 3px;
+margin: 8px;
 transition: transform 400ms ease-out;
 }
-.active, nav a:hover {background: #fff; opacity: .97;transform: scale(1.05); color:#d00089;}
+.active, nav a:hover { background:rgba(255,255,255,.1);opacity: .97;transform: scale(1.05); color:#d00089 !important;}
+
+
+.tooltip {
+      position: fixed;
+      padding: 5px;
+      text-align: center;
+      font: italic 14px/1.3 arial, sans-serif;
+      color: #4a0a33;
+      
+     font-weight:bold;
+     background:rgba(255,255,255,.8);
+   animation: fadeIn 1.2s;
+    }
+    
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    
