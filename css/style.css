@@ -102,6 +102,7 @@ ul{list-style: none}
 	width: 345px;
   margin-top: 25px;
 }
+.on li i{padding: 15px;}
  li i{
   width: 50px;
   height: 50px;
