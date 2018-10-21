@@ -150,3 +150,6 @@ transition: transform 400ms ease-out;
     
     @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
     
+.loc1 i:hover,.loc2 i:hover,.loc3 i:hover,.loc4 i:hover,.ism3:not(.x):not(.lx) i:hover,.ism4:not(.x):not(.lx) i:hover
+{background-image: url(../img/tooltip.png);animation: fadeIn .45s;}
+    
