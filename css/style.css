@@ -148,11 +148,14 @@ transition: transform 400ms ease-out;
    animation: fadeIn 1.2s;
     }
     
-    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }  
     
 .loc1 i:hover,.loc2 i:hover,.loc3 i:hover,.loc4 i:hover,.ism3:not(.x):not(.lx) i:hover,.ism4:not(.x):not(.lx) i:hover
-{background-image: url(../img/tooltip.png);animation: fadeIn .45s;}
-    
+{background-image: url(../img/tooltip.png)}
+.ism3.x i:hover,.ism3.lx i:hover
+{background-image: url(../img/tooltip_ism3.png)}
+.ism4.x i:hover,.ism4.lx i:hover
+{background-image: url(../img/tooltip_ism4.png)}    
 .boss i:hover,.hard i:hover
-{background-image: url(../img/tooltip_boss.png);animation: fadeIn .45s;}
-    
+{background-image: url(../img/tooltip_boss.png)}
+i:hover{animation: fadeIn .45s;}
