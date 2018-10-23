@@ -1,7 +1,7 @@
 * {margin:0;padding:0;box-sizing: border-box;}
  body {
   font: 16px/1.5em "Segoe UI", Arial, sans-serif;
-  background: #bfb6a0;
+  background: #bfb6a0  url(../img/logo.png) no-repeat fixed  top 55% center  ;
   padding: 15px ;
 }
 body>*{ 
@@ -89,7 +89,7 @@ li{background-repeat: no-repeat ;      color: #b63333;  }
 .calc{
   overflow: auto;
   padding: 16px ;
-  margin-top: 25px; 
+ 
 }
 
 
@@ -132,9 +132,9 @@ color: #4a0a33;
 font-weight:bold;
 margin: 8px;
 transition: transform 400ms ease-out;
-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+ box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-.active, nav a:hover { background:rgba(255,255,255,.1);opacity: .97;transform: scale(1.05); color:#d00089 !important;}
+.active, nav a:hover { background:rgba(255,255,255,.1);opacity: .97;transform: scale(1.05); color:#D00087 !important;}
 
 
 .tooltip {
