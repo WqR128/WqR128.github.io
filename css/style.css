@@ -159,4 +159,4 @@ transition: transform 400ms ease-out;
 .boss i:hover,.hard i:hover
 {background-image: url(../img/tooltip_boss.png)}
 i:hover{transition-delay: .25s;}
-i{transition-delay: .8s;}
+i{transition-delay: .4s;}
