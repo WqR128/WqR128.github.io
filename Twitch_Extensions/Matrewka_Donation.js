@@ -10,7 +10,7 @@
     a.async = 1;
     a.src = g;
     m.parentNode.insertBefore(a, m)
-})(window, document, 'script', 'https://www.googletagmanager.com/gtag/js?id=UA-173470587-1, 'ga');
+})(window, document, 'script', 'https://www.googletagmanager.com/gtag/js?id=UA-173470587-1', 'ga');
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
