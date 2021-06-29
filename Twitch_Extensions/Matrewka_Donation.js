@@ -17,4 +17,5 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-173470587-1');
-
+//debug
+   document.querySelector('#visaHover').innerHTML = `test`;
